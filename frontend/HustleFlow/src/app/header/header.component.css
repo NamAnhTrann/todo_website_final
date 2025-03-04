@@ -1,0 +1,7 @@
+.custom-nav a{
+  transition: transform 0.3s ease-in-out;
+}
+.custom-nav a:hover{
+  transform: translateY(-5px);
+
+}
