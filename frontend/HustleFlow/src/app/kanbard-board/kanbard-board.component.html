@@ -14,31 +14,86 @@
     [class.ml-0]="!isSidebarOpen">
 
     <section class="kanban-board-custom mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 p-6 bg-gray-50 dark:bg-gray-800">
-      <!-- To Do Column -->
-      <div class="p-4 rounded-lg shadow bg-white dark:bg-gray-900">
+
+      <!-- In Progress Column -->
+      <div class="p-4 rounded-lg">
         <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">To Do</h3>
-        <div class="kanban-board-item h-40 bg-gray-100 dark:bg-gray-700 rounded-lg p-3"></div>
-        <button class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600">
+        @for (task of toDo; track $index) {
+          <div class="kanban-board-item mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 space-y-2 border-l-4 border-blue-500">
+            <h1 class="text-lg font-semibold text-gray-900 dark:text-white truncate">
+              {{ task.kanbanTitle }}
+            </h1>
+            <p class="text-gray-600 dark:text-gray-300 text-sm truncate">
+              {{ task.kanbanDescription }}
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
+                {{ task.kanbanEnum }}
+              </span>
+              <button class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
+                Edit
+              </button>
+            </div>
+          </div>
+        }
+
+        <button (click)="addTask()" class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
           Add Task
         </button>
       </div>
 
-      <!-- In Progress Column -->
-      <div class="p-4 rounded-lg shadow bg-white dark:bg-gray-900">
-        <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">In Progress</h3>
-        <div class="kanban-board-item h-40 bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
+      <div class="p-4 rounded-lg"
 
-        </div>
-        <button class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600">
+
+      >
+        <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">In Progress</h3>
+        @for (task of pending; track $index) {
+          <div class="kanban-board-item mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 space-y-2 border-l-4 border-blue-500">
+            <h1 class="text-lg font-semibold text-gray-900 dark:text-white truncate">
+              {{ task.kanbanTitle }}
+            </h1>
+            <p class="text-gray-600 dark:text-gray-300 text-sm truncate">
+              {{ task.kanbanDescription }}
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
+                {{ task.kanbanEnum }}
+              </span>
+              <button class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
+                Edit
+              </button>
+            </div>
+          </div>
+        }
+
+        <button (click)="addTask()" class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
           Add Task
         </button>
       </div>
 
       <!-- Completed Column -->
-      <div class="p-4 rounded-lg shadow bg-white dark:bg-gray-900">
+      <div class="p-4 rounded-lg ">
         <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Completed</h3>
-        <div class="kanban-board-item h-40 bg-gray-100 dark:bg-gray-700 rounded-lg p-3"></div>
-        <button class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600">
+        @for (task of completed; track $index) {
+          <div class="kanban-board-item border border-blue-500 mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 space-y-2 border-l-4 border-blue-500">
+            <h1 class="text-lg font-semibold text-gray-900 dark:text-white truncate">
+              {{ task.kanbanTitle }}
+            </h1>
+            <p class="text-gray-600 dark:text-gray-300 text-sm truncate">
+              {{ task.kanbanDescription }}
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
+                {{ task.kanbanEnum }}
+              </span>
+              <button class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
+                Edit
+              </button>
+            </div>
+          </div>
+        }
+
+        <button (click)="addTask()" class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 rounded">
           Add Task
         </button>
       </div>

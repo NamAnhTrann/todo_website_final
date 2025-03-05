@@ -13,6 +13,16 @@ module.exports = {
     }
   },
 
+  listAllKanbanTask: async function (req, res) {
+    try {
+      //const userId = req.user._Id
+      const KanbanTasks = await Kanban.find({});
+      return res.status(201).json(KanbanTasks);
+    } catch (err) {
+      return res.status(500).json({ messae: "Error listing tasks", err });
+    }
+  },
+
   //TODO
   listKanbanId: async function (req, res) {
     try {
