@@ -1,0 +1,47 @@
+<div class="flex min-h-screen bg-gray-50 dark:bg-gray-800">
+
+  <!-- Sidebar (Fixed on Left) -->
+  <app-side-navbar
+    class="fixed left-0 top-0 h-full z-40 transition-all duration-300"
+    [class.w-64]="isSidebarOpen"
+    [class.w-0]="!isSidebarOpen"
+    (sidebarToggled)="isSidebarOpen = $event">
+  </app-side-navbar>
+
+  <!-- Main Content (Kanban Board) -->
+  <div class="flex-1 transition-all duration-300 p-6"
+    [class.ml-64]="isSidebarOpen"
+    [class.ml-0]="!isSidebarOpen">
+
+    <section class="kanban-board-custom mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 p-6 bg-gray-50 dark:bg-gray-800">
+      <!-- To Do Column -->
+      <div class="p-4 rounded-lg shadow bg-white dark:bg-gray-900">
+        <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">To Do</h3>
+        <div class="kanban-board-item h-40 bg-gray-100 dark:bg-gray-700 rounded-lg p-3"></div>
+        <button class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600">
+          Add Task
+        </button>
+      </div>
+
+      <!-- In Progress Column -->
+      <div class="p-4 rounded-lg shadow bg-white dark:bg-gray-900">
+        <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">In Progress</h3>
+        <div class="kanban-board-item h-40 bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
+
+        </div>
+        <button class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600">
+          Add Task
+        </button>
+      </div>
+
+      <!-- Completed Column -->
+      <div class="p-4 rounded-lg shadow bg-white dark:bg-gray-900">
+        <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Completed</h3>
+        <div class="kanban-board-item h-40 bg-gray-100 dark:bg-gray-700 rounded-lg p-3"></div>
+        <button class="add-task w-full mt-2 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600">
+          Add Task
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
