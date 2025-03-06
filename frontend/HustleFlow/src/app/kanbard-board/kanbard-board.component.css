@@ -1,0 +1,40 @@
+.heading-custom {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+
+}
+
+.heading-custom::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.heading-custom:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.kanban-board-item {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.kanban-board-item:hover {
+  transform: scale(1.03);
+}
+
+.kanban-board-item[cdkDragPlaceholder],
+.kanban-board-item.cdk-drag-preview {
+  transition: none !important;
+}
+

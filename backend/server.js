@@ -13,9 +13,11 @@ const mongodb_url = process.env.MONGOD_URL;
 
 //router imports
 const kanbanRouter = require("./router/kanbanRouter");
+const reminderRouter = require("./router/reminderRouter");
 
 //use routers
 app.use(kanbanRouter);
+app.use(reminderRouter);
 
 app.use(
   cors({

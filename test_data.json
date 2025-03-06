@@ -1,0 +1,205 @@
+[
+    {
+        "kanbanTitle": "Fix login bug",
+        "kanbanDescription": "Investigate and resolve the issue with user authentication.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-03-05T00:32:27.628+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Implement dark mode",
+        "kanbanDescription": "Add dark mode support to the UI based on user preferences.",
+        "kanbanEnum": "TO_DO",
+        "kanbanCreated": "2025-03-04T14:21:10.128+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Database schema update",
+        "kanbanDescription": "Modify the database schema to support multi-tenancy.",
+        "kanbanEnum": "IN_PROGRESS",
+        "kanbanCreated": "2025-03-03T10:15:45.512+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Optimize API performance",
+        "kanbanDescription": "Refactor API endpoints to improve response times.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-03-02T08:45:33.912+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Create unit tests",
+        "kanbanDescription": "Write unit tests for the authentication module.",
+        "kanbanEnum": "TO_DO",
+        "kanbanCreated": "2025-03-01T18:30:20.501+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Design new landing page",
+        "kanbanDescription": "Create a modern design for the application's homepage.",
+        "kanbanEnum": "IN_PROGRESS",
+        "kanbanCreated": "2025-02-28T09:12:40.715+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Fix CSS layout issue",
+        "kanbanDescription": "Resolve alignment issues in the dashboard component.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-27T15:47:59.112+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Implement email notifications",
+        "kanbanDescription": "Enable email notifications for user actions.",
+        "kanbanEnum": "TO_DO",
+        "kanbanCreated": "2025-02-26T11:05:22.674+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Integrate payment gateway",
+        "kanbanDescription": "Implement Stripe for secure online payments.",
+        "kanbanEnum": "IN_PROGRESS",
+        "kanbanCreated": "2025-02-25T20:55:38.215+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Setup CI/CD pipeline",
+        "kanbanDescription": "Automate deployment using GitHub Actions.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-24T06:30:11.392+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Upgrade security protocols",
+        "kanbanDescription": "Implement OAuth2 and enhance token security.",
+        "kanbanEnum": "TO_DO",
+        "kanbanCreated": "2025-02-23T13:12:45.923+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Migrate database",
+        "kanbanDescription": "Move from MySQL to PostgreSQL for better scalability.",
+        "kanbanEnum": "IN_PROGRESS",
+        "kanbanCreated": "2025-02-22T09:30:18.112+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Refactor frontend components",
+        "kanbanDescription": "Optimize and modularize UI components for better performance.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-21T07:45:27.542+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Implement two-factor authentication",
+        "kanbanDescription": "Enhance account security with two-factor authentication.",
+        "kanbanEnum": "TO_DO",
+        "kanbanCreated": "2025-02-20T15:19:34.215+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Optimize database queries",
+        "kanbanDescription": "Refactor SQL queries to improve performance and reduce latency.",
+        "kanbanEnum": "IN_PROGRESS",
+        "kanbanCreated": "2025-02-19T10:10:10.725+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Improve accessibility features",
+        "kanbanDescription": "Ensure the website meets WCAG 2.1 compliance.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-18T20:05:39.828+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Enable social media logins",
+        "kanbanDescription": "Allow users to log in via Google, Facebook, and GitHub.",
+        "kanbanEnum": "TO_DO",
+        "kanbanCreated": "2025-02-17T12:14:52.332+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Enhance search functionality",
+        "kanbanDescription": "Implement fuzzy search and autocomplete for user queries.",
+        "kanbanEnum": "IN_PROGRESS",
+        "kanbanCreated": "2025-02-16T18:45:22.119+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Add user activity logs",
+        "kanbanDescription": "Track user actions for better debugging and insights.",
+        "kanbanEnum": "COMPLETED",
+        "kanbanCreated": "2025-02-15T22:30:14.658+00:00",
+        "__v": 0
+    },
+    {
+        "kanbanTitle": "Implement role-based access control",
+        "kanbanDescription": "Define user roles and restrict permissions accordingly.",
+        "kanbanEnum": "TO_DO",
+        "kanbanCreated": "2025-02-14T09:55:37.282+00:00",
+        "__v": 0
+    }
+]

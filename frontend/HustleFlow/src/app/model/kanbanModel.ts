@@ -1,9 +1,10 @@
 export class Kanban {
-  _id?: String;
-  kanbanTitle: String;
-  kanbanDescription: String;
+  _id?: string;
+  kanbanTitle: string;
+  kanbanDescription: string;
   kanbanCreatedAt: Date;
   kanbanEnum: string;
+
 
   constructor(){
     this.kanbanTitle = "";

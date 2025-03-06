@@ -22,5 +22,25 @@ export class DatabaseService {
     return this.http.get(`${this.localUrl}/get/all/kanban/task/`, httpOptions)
   }
 
+  updateKanbanTask(taskId: string, taskData: any) {
+    return this.http.put(`${this.localUrl}/edit/kanban/${taskId}`, taskData, httpOptions);
+  }
+  deleteKanbanTask(taskId: string){
+    return this.http.delete(`${this.localUrl}/delete/kanban/${taskId}`, httpOptions)
+  }
+
+
+  //remidner section
+  addReminder(reminderData:any){
+    return this.http.post(`${this.localUrl}/add/reminder/api/`, reminderData, httpOptions)
+  }
+
+  listAllReminder(){
+    return this.http.get(`${this.localUrl}/list/reminder/api/`, httpOptions);
+  }
+
+
+
+
 
 }
