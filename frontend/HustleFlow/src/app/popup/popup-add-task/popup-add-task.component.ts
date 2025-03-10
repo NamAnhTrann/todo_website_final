@@ -27,7 +27,7 @@ export class PopupAddTaskComponent {
     this.db.addKanbanTask(this.kanbanData).subscribe(() => {
       this.taskAdded.emit();
       this.kanbanData = new Kanban();
-      this.closeDialog(); // Close popup after saving
+      this.closeDialog(); // Close
     });
   }
 }

@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { CdkDragDrop, DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PopupAddTaskComponent } from '../popup/popup-add-task/popup-add-task.component';
+import { PopupUpdateTaskComponent } from '../popup/popup-update-task/popup-update-task.component';
 
 @Component({
   selector: 'app-kanbard-board',
@@ -44,6 +45,20 @@ export class KanbardBoardComponent {
       this.fetchKanbanTask();
     });
   }
+  updateTask(task: Kanban) {
+    const dialogRef = this.dialog.open(PopupUpdateTaskComponent, {
+      width: '400px',
+      data: { kanbanData: { ...task }, taskId: task._id },
+      disableClose: false,
+      panelClass: 'custom-dialog-container',
+      backdropClass: 'custom-backdrop',
+    });
+
+    dialogRef.componentInstance.taskUpdated.subscribe(() => {
+      this.fetchKanbanTask();
+    });
+  }
+
 
   //TODO
   dropItem(event: CdkDragDrop<Kanban[]>, newStatus: string) {

@@ -37,7 +37,7 @@
                 {{ task.kanbanEnum }}
               </span>
               <div class="flex space-x-2">
-                <button class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
+                <button (click)="updateTask(task)" class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
                   Edit
                 </button>
                 <button (click)="deleteTask(task._id)"
@@ -77,7 +77,7 @@
                 {{ task.kanbanEnum }}
               </span>
               <div class="flex space-x-2">
-                <button class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
+                <button (click)="updateTask(task)" class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
                   Edit
                 </button>
                 <button (click)="deleteTask(task._id)"
@@ -117,7 +117,7 @@
                 {{ task.kanbanEnum }}
               </span>
               <div class="flex space-x-2">
-                <button class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
+                <button (click)="updateTask(task)" class="px-3 py-1 text-xs font-medium text-white bg-gray-700 dark:bg-gray-600 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-500 transition-all">
                   Edit
                 </button>
                 <button (click)="deleteTask(task._id)"
