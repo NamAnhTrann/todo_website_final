@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import app from "../firebaseConfig";
-import {getAuth, GoogleAuthProvider, signInWithPopup, User} from 'firebase/auth';
+import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, User} from 'firebase/auth';
 
 
 
@@ -16,10 +16,21 @@ export class AuthService {
   provider = new GoogleAuthProvider();
   uid: string = '';
   user: User | null  = null;
+  currentUser:User | null = null;
 
 
 
-  constructor(private http: HttpClient, private router:Router) { }
+  constructor(private http: HttpClient, private router:Router) {
+    this.listenForChanges();
+   }
+
+
+  listenForChanges(){
+    onAuthStateChanged(this.auth, (user)=>{
+      this.currentUser = user;
+      console.log("user restored")
+    })
+  }
 
   loginWithGoogle(){
     return signInWithPopup(this.auth, this.provider).then(async (res)=>{
@@ -28,7 +39,11 @@ export class AuthService {
       const token = await this.user.getIdToken();
       console.log("token check: ", token);
 
-      //implement send token back to backend
+      this.sendFirebaseToken(token).subscribe({
+        next: (res) => console.log("Token sent to backend:", res),
+        error: (err) => console.error("Error sending token to backend:", err)
+      });
+
       return token
     }).catch (err=>{
       console.log("Google login failed", err);
@@ -43,7 +58,6 @@ export class AuthService {
         "Authorization": `Bearer ${token}`
       }),
     }
-    //sending the info back to the backend api endpoint
-    // return this.http.post()
+    return this.http.post(`${this.localUrl}/verify/token/`, {token}, httpOptions)
   }
 }
